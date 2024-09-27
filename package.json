@@ -1,0 +1,17 @@
+{
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.12.0",
+    "parcel": "^2.12.0",
+    "tailwindcss": "^3.4.12"
+  },
+  "name": "api_search",
+  "version": "1.0.0",
+  "description": "application for searching apis",
+  "dependencies": {},
+  "scripts": {
+    "start": "tailwindcss -i ./src/input.css -o ./src/output.css && parcel src/index.html",
+    "build": "parcel build src/index.html --dist-dir ./dist"
+  },
+  "author": "",
+  "license": "ISC"
+}
