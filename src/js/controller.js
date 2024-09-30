@@ -6,6 +6,7 @@ import View from "./views/View";
 import searchAuthView from "./views/searchAuthView";
 import searchView from "./views/searchView";
 import categoriesNavView from "./views/categoriesNavView";
+import categoriesResponsiveView from "./views/categoriesResponsiveView";
 
 const checkBoolean = function (string) {
   return string === "true";
@@ -73,6 +74,7 @@ const init = function () {
   categoriesNavView.addClickEvent(controlCategoryNav);
   paginationView.addClickEvent(controlPagination);
   searchView.addClickEvent(controlSearch);
+  categoriesResponsiveView.addClickEvent();
 };
 
 init();

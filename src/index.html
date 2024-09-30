@@ -15,7 +15,7 @@
     <script type="module" src="./js/controller.js"></script>
     <title>API search</title>
   </head>
-  <body class="bg-gray-900 text-gray-200 px-12 py-4">
+  <body class="bg-gray-900 text-gray-200 px-4 md:px-12 py-4">
     <header class="flex justify-between">
       <div class="text-l font-bold uppercase">API search</div>
       <div class="flex gap-4">
@@ -99,11 +99,16 @@
     <section
       class="grid grid-cols-1 md:grid-cols-5 gap-20 md:gap-40 lg:gap-52 pt-6"
     >
-      <nav class="flex flex-col min-w-48 gap-4">
-        <h3 class="uppercase font-bold">Categories</h3>
-        <ul class="category-nav flex flex-col gap-2 text-gray-400"></ul>
+      <nav class="side-nav flex flex-col min-w-48 gap-4">
+        <div class="flex gap-8 items-center">
+          <h3 class="uppercase font-bold">Categories</h3>
+          <i class="side-nav-btn fa-solid fa-plus transition-all md:hidden"></i>
+        </div>
+        <ul
+          class="category-nav flex-col gap-2 text-gray-400 invisible opacity-0 transition-all translate-x-[-20rem] absolute md:static md:visible md:opacity-100 md:translate-x-0 md:flex"
+        ></ul>
       </nav>
-      <div class="page-container col-span-4 relative pb-10">
+      <div class="page-container transition-all col-span-4 relative pb-10">
         <div class="category-container">
           <!-- <h2 class="uppercase font-bold pb-3">Category</h2> -->
           <div
