@@ -1036,3 +1036,9 @@ video {
     gap: 13rem;
   }
 }
+
+@media (min-width: 1280px) {
+  .xl\:flex-row {
+    flex-direction: row;
+  }
+}

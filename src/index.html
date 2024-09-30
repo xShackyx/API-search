@@ -34,66 +34,72 @@
         The growing source for all the public APIs is empowered by the community
         to ensure you will get the most recent data of all possible public APIs
       </p>
-      <form class="search-form flex flex-col md:flex-row align-middle gap-6">
-        <div
-          class="pl-2 h-10 flex justify-start items-center gap-2 border border-gray-700 rounded"
-        >
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <input
-            type="text"
-            id="search"
-            name="search"
-            placeholder="Which API are you looking for?"
-            class="search-input bg-transparent focus:outline-none w-72 pr-2"
-          />
+      <form class="search-form flex flex-col xl:flex-row align-middle gap-6">
+        <div class="flex flex-col md:flex-row gap-6">
+          <div
+            class="pl-2 h-10 flex justify-start items-center gap-2 border border-gray-700 rounded"
+          >
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input
+              type="text"
+              id="search"
+              name="search"
+              placeholder="Which API are you looking for?"
+              class="search-input bg-transparent focus:outline-none w-72 pr-2"
+            />
+          </div>
+          <select
+            class="auth-select h-10 py-1 px-8 bg-transparent border border-gray-700 rounded"
+            name="Auth"
+          ></select>
         </div>
-        <select
-          class="auth-select py-1 px-8 bg-transparent border border-gray-700 rounded"
-          name="Auth"
-        ></select>
-        <select
-          class="cors-select py-1 px-8 bg-transparent border border-gray-700 rounded"
-          name="Cors"
-        >
-          <option
-            class="bg-gray-900 text-gray-200"
-            selected
-            disabled
-            hidden
-            value="default"
+        <div class="flex flex-col md:flex-row gap-6">
+          <select
+            class="cors-select h-10 py-1 px-8 bg-transparent border border-gray-700 rounded"
+            name="Cors"
           >
-            Cors presence
-          </option>
-          <option class="bg-gray-900 text-gray-200" value="default">
-            View all cors types
-          </option>
-          <option class="bg-gray-900 text-gray-200" value="yes">Yes</option>
-          <option class="bg-gray-900 text-gray-200" value="no">No</option>
-        </select>
-        <select
-          class="https-select py-1 px-8 bg-transparent border border-gray-700 rounded"
-          name="HTTPS"
-        >
-          <option
-            class="bg-gray-900 text-gray-200"
-            selected
-            disabled
-            hidden
-            value="default"
+            <option
+              class="bg-gray-900 text-gray-200"
+              selected
+              disabled
+              hidden
+              value="default"
+            >
+              Cors presence
+            </option>
+            <option class="bg-gray-900 text-gray-200" value="default">
+              View all cors types
+            </option>
+            <option class="bg-gray-900 text-gray-200" value="yes">Yes</option>
+            <option class="bg-gray-900 text-gray-200" value="no">No</option>
+          </select>
+
+          <select
+            class="https-select h-10 py-1 px-8 bg-transparent border border-gray-700 rounded"
+            name="HTTPS"
           >
-            HTTPS presence
-          </option>
-          <option class="bg-gray-900 text-gray-200" value="default">
-            View all HTTPS types
-          </option>
-          <option class="bg-gray-900 text-gray-200" value="true">Yes</option>
-          <option class="bg-gray-900 text-gray-200" value="false">No</option>
-        </select>
-        <button
-          class="search-btn py-1 px-8 text-gray-900 font-bold bg-white rounded active:translate-x-0.5 active:translate-y-0.5 active:shadow-[inset_0_-2px_4px_rgba(0,0,0,0.6)]"
-        >
-          Search
-        </button>
+            <option
+              class="bg-gray-900 text-gray-200"
+              selected
+              disabled
+              hidden
+              value="default"
+            >
+              HTTPS presence
+            </option>
+            <option class="bg-gray-900 text-gray-200" value="default">
+              View all HTTPS types
+            </option>
+            <option class="bg-gray-900 text-gray-200" value="true">Yes</option>
+            <option class="bg-gray-900 text-gray-200" value="false">No</option>
+          </select>
+
+          <button
+            class="search-btn h-10 py-1 px-8 text-gray-900 font-bold bg-white rounded active:translate-x-0.5 active:translate-y-0.5 active:shadow-[inset_0_-2px_4px_rgba(0,0,0,0.6)]"
+          >
+            Search
+          </button>
+        </div>
       </form>
     </section>
     <section
