@@ -68,8 +68,8 @@ const controlPagination = function (page) {
 };
 
 const init = function () {
-  window.addEventListener("load", controlCategories);
-  window.addEventListener("load", controlCard);
+  categoriesNavView.addLoadEvent(controlCategories);
+  cardsView.addLoadEvent(controlCard);
   categoriesNavView.addClickEvent(controlCategoryNav);
   paginationView.addClickEvent(controlPagination);
   searchView.addClickEvent(controlSearch);

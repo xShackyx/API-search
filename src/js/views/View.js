@@ -14,4 +14,8 @@ export default class View {
     this.clear();
     this._parentElement.insertAdjacentHTML("afterbegin", spinner);
   }
+
+  addLoadEvent(callback) {
+    window.addEventListener("load", callback);
+  }
 }

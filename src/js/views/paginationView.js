@@ -5,17 +5,6 @@ class paginationView extends View {
   _parentElement = document.querySelector(".pagination");
   _data = {};
 
-  addClickEvent(callback) {
-    this._parentElement.addEventListener("click", function (e) {
-      e.preventDefault();
-      const btn = e.target.closest(".page-btn");
-
-      if (!btn) return;
-      const data = +btn.dataset.page;
-      callback(data);
-    });
-  }
-
   calcPagination(data) {
     const numPages = Math.ceil(data.cards.length / data.resultsPerPage);
     return numPages;
@@ -74,6 +63,17 @@ class paginationView extends View {
             </button>`;
     this.clear();
     this._parentElement.insertAdjacentHTML("afterbegin", markup);
+  }
+
+  addClickEvent(callback) {
+    this._parentElement.addEventListener("click", function (e) {
+      e.preventDefault();
+      const btn = e.target.closest(".page-btn");
+
+      if (!btn) return;
+      const data = +btn.dataset.page;
+      callback(data);
+    });
   }
 }
 
