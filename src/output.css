@@ -760,6 +760,10 @@ video {
   fill: #fff;
 }
 
+.p-2 {
+  padding: 0.5rem;
+}
+
 .p-48 {
   padding: 12rem;
 }
