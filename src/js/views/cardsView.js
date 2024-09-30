@@ -15,13 +15,16 @@ class cardsView extends View {
   };
 
   renderCards(data) {
-    if (!data || (Array.isArray(data) && data.length === 0)) return;
     this._data = data;
     let markup = "";
-    data.forEach((card) => {
+    if (!data || (Array.isArray(data) && data.length === 0)) {
       markup =
-        markup +
-        `<a href="${card.link}" target="_blank"
+        "<p class='font-bold text-4xl col-start-2 place-self-center pt-32'>No API found, please change your search query!</p>";
+    } else {
+      data.forEach((card) => {
+        markup =
+          markup +
+          `<a href="${card.link}" target="_blank"
                 class="single-card-container min-h-48 grid grid-cols-1 border border-gray-700 rounded-md px-4 py-2 hover:border-white hover:cursor-pointer"
               >
                 <div class="pb-3 flex gap-4 items-center">              
@@ -65,7 +68,8 @@ class cardsView extends View {
                   </div>
                 </div>
               </a>`;
-    });
+      });
+    }
     this.clear();
     this._parentElement.insertAdjacentHTML("afterbegin", markup);
   }

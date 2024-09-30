@@ -729,6 +729,11 @@ video {
   background-color: transparent;
 }
 
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
 .fill-gray-500 {
   fill: #6b7280;
 }
@@ -800,6 +805,10 @@ video {
   padding-top: 6rem;
 }
 
+.pt-32 {
+  padding-top: 8rem;
+}
+
 .pt-6 {
   padding-top: 1.5rem;
 }
@@ -811,6 +820,11 @@ video {
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .text-6xl {
@@ -920,6 +934,22 @@ video {
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+.active\:translate-x-0\.5:active {
+  --tw-translate-x: 0.125rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.active\:translate-y-0\.5:active {
+  --tw-translate-y: 0.125rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.active\:shadow-\[inset_0_-2px_4px_rgba\(0\2c 0\2c 0\2c 0\.6\)\]:active {
+  --tw-shadow: inset 0 -2px 4px rgba(0,0,0,0.6);
+  --tw-shadow-colored: inset 0 -2px 4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 @media (min-width: 768px) {

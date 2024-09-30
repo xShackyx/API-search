@@ -6,22 +6,26 @@ class navView extends View {
   _category = "";
 
   renderNav(data, currentCategory) {
-    if (!data || (Array.isArray(data) && data.length === 0)) return;
     this._category = currentCategory;
     this._data = data;
     const highlight = "font-semibold text-white";
-    let markup = `<li data-category="" class="category-nav-btn hover:text-white hover:cursor-pointer ${
-      currentCategory === "" ? highlight : ""
-    }"><i class="fa-solid fa-home"></i> View All</li>`;
-    data.forEach((cat) => {
-      markup =
-        markup +
-        `<li data-category="${
-          cat.slug
-        }" class="category-nav-btn hover:text-white hover:cursor-pointer ${
-          currentCategory === cat.slug ? highlight : ""
-        }"><i class="fa-solid fa-${cat.icon}"></i> ${cat.name}</li>`;
-    });
+    let markup = "";
+    if (!data || (Array.isArray(data) && data.length === 0)) {
+      markup = "<p>No categories found!</p>";
+    } else {
+      markup = `<li data-category="" class="category-nav-btn hover:text-white hover:cursor-pointer ${
+        currentCategory === "" ? highlight : ""
+      }"><i class="fa-solid fa-home"></i> View All</li>`;
+      data.forEach((cat) => {
+        markup =
+          markup +
+          `<li data-category="${
+            cat.slug
+          }" class="category-nav-btn hover:text-white hover:cursor-pointer ${
+            currentCategory === cat.slug ? highlight : ""
+          }"><i class="fa-solid fa-${cat.icon}"></i> ${cat.name}</li>`;
+      });
+    }
     this.clear();
     this._parentElement.insertAdjacentHTML("afterbegin", markup);
   }
