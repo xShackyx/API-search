@@ -7,7 +7,7 @@ export default class View {
 
   renderSpinner() {
     const spinner = `
-    <div class= "text-6xl col-start-2 place-self-center p-48">
+    <div class= "text-6xl md:col-start-2 place-self-center p-48">
     <i class="fa-solid fa-spinner animate-spin"></i>
     </div>
     `;

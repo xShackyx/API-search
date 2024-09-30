@@ -1000,6 +1000,10 @@ video {
     position: static;
   }
 
+  .md\:col-start-2 {
+    grid-column-start: 2;
+  }
+
   .md\:flex {
     display: flex;
   }
