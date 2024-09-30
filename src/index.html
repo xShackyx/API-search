@@ -11,6 +11,7 @@
     />
     <link href="assets/fontawesome/css/fontawesome.min.css" rel="stylesheet" />
     <link href="assets/fontawesome/css/solid.min.css" rel="stylesheet" />
+    <link href="assets/fontawesome/css/brands.min.css" rel="stylesheet" />
     <link href="./output.css" rel="stylesheet" />
     <script type="module" src="./js/controller.js"></script>
     <title>API search</title>
@@ -18,15 +19,24 @@
   <body class="bg-gray-900 text-gray-200 px-4 md:px-12 py-4">
     <header class="flex justify-between">
       <div class="text-l font-bold uppercase">API search</div>
-      <div class="flex gap-4">
-        <div>nav 1</div>
-        <div>nav 2</div>
-        <div>nav 3</div>
-        <div>nav 4</div>
-        <div>nav 5</div>
-      </div>
+      <nav class="flex justify-center items-center gap-8">
+        <a
+          href="https://github.com/xShackyx"
+          target="_blank"
+          class="flex justify-center items-center gap-1 p-1 font-bold text-gray-900 bg-white rounded active:translate-x-0.5 active:translate-y-0.5 active:shadow-[inset_0_-2px_4px_rgba(0,0,0,0.6)]"
+        >
+          <i class="fa-brands fa-github"></i>
+          xShackyx
+        </a>
+        <a
+          href="https://github.com/marcelscruz/public-apis"
+          target="_blank"
+          class="hover:text-white"
+          >Resources</a
+        >
+      </nav>
     </header>
-    <section class="pt-24 pb-10 flex flex-col gap-6 border-b border-gray-700">
+    <section class="pt-20 pb-10 flex flex-col gap-6 border-b border-gray-700">
       <h1 class="text-3xl font-bold uppercase text-gray-50">
         A curated list for public apis
       </h1>
@@ -217,6 +227,25 @@
         </div>
       </div>
     </section>
-    <footer></footer>
+    <footer class="pt-4 flex flex-col items-end justify-center">
+      <p class="text-gray-400">
+        Website developed with 💖 by
+        <a
+          href="https://github.com/xShackyx"
+          target="_blank"
+          class="text-gray-200"
+          >@xShackyx</a
+        >
+      </p>
+      <p class="text-gray-400">
+        Resources by
+        <a
+          href="https://github.com/marcelscruz/public-apis"
+          target="_blank"
+          class="text-gray-200"
+          >the community</a
+        >
+      </p>
+    </footer>
   </body>
 </html>

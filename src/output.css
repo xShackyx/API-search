@@ -660,6 +660,10 @@ video {
   flex-direction: column;
 }
 
+.items-end {
+  align-items: flex-end;
+}
+
 .items-center {
   align-items: center;
 }
@@ -760,6 +764,10 @@ video {
   fill: #fff;
 }
 
+.p-1 {
+  padding: 0.25rem;
+}
+
 .p-2 {
   padding: 0.5rem;
 }
@@ -818,12 +826,16 @@ video {
   padding-right: 0.5rem;
 }
 
-.pt-24 {
-  padding-top: 6rem;
+.pt-20 {
+  padding-top: 5rem;
 }
 
 .pt-32 {
   padding-top: 8rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
 }
 
 .pt-6 {
