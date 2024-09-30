@@ -1,6 +1,7 @@
 export default class View {
   _parentElement;
   _data;
+
   clear() {
     this._parentElement.innerHTML = "";
   }
@@ -17,5 +18,11 @@ export default class View {
 
   addLoadEvent(callback) {
     window.addEventListener("load", callback);
+  }
+
+  renderError(error) {
+    const markup = `<p>Server error occurred! (${error})</p>`;
+    this.clear();
+    this._parentElement.insertAdjacentHTML("afterbegin", markup);
   }
 }

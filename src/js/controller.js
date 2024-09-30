@@ -25,6 +25,7 @@ const controlCategories = async function () {
     await model.loadSideNav();
     navView.renderNav(model.state.categories, model.state.query.category);
   } catch (err) {
+    navView.renderError(err.message);
     console.log(err);
   }
 };
@@ -35,6 +36,7 @@ const controlCategoryNav = async function (category) {
     navView.renderNav(model.state.categories, model.state.query.category);
     loadCards();
   } catch (err) {
+    navView.renderError(err.message);
     console.log(err);
   }
 };
@@ -48,6 +50,7 @@ const controlSearch = async function (query) {
       query.https === "default" ? null : checkBoolean(query.https);
     loadCards();
   } catch (err) {
+    cardsView.renderError(err.message);
     console.log(err);
   }
 };
@@ -58,6 +61,7 @@ const controlCard = async function () {
     model.loadAuthValues();
     searchAuthView.renderAuthTags(model.state.authList);
   } catch (err) {
+    cardsView.renderError(err.message);
     console.log(err);
   }
 };
